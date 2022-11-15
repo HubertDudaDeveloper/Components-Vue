@@ -1,0 +1,25 @@
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+button:hover,
+input:hover,
+a:hover,
+.hover:hover {
+  filter: brightness(90%);
+  transition: 0.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* label[required=true]::after {
+  content: " *";
+  color: red;
+}/*# sourceMappingURL=style.css.map */

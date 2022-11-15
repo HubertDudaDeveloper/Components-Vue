@@ -1,0 +1,14 @@
+@import './partial/_color'
+@import './partial/_glass'
+@import './partial/_button'
+@import './partial/_hover'
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+    label[required="true"]::after
+        content: ' *'
+        color: red
