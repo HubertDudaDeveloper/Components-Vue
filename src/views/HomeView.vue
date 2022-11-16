@@ -51,6 +51,8 @@
     :slide="item.slide"
     :id="'carousel_' + index"
     />
+    <WavesComponent
+    />
   </main>
 </template>
 
@@ -63,7 +65,7 @@ import WrapperComponent from '@/components/WrapperComponent.vue'
 import TitleComponent from '@/components/TitleComponent.vue'
 import SelectComponent from '@/components/SelectComponent.vue'
 import CarouselComponent from '@/components/CarouselComponent.vue'
-
+import WavesComponent from '@/components/WavesComponent.vue'
 const ok = () => {
   alert('test')
 }
