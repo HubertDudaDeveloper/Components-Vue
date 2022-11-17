@@ -105,6 +105,33 @@ a:hover,
   border-top: 60px solid #0099ff;
 }
 
+.gallery__image {
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.gallery__image:hover {
+  scale: 1.05;
+  filter: brightness(50%);
+  box-shadow: 5px 5px 10px gray;
+}
+
+.shadowbox {
+  position: fixed;
+  background: black;
+  top: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 100vh;
+}
+
+.lightbox__image {
+  position: fixed;
+  top: 25%;
+  max-height: 500px;
+  padding: 50px;
+}
+
 * {
   margin: 0;
   padding: 0;
