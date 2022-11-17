@@ -14,6 +14,97 @@ a:hover,
   transition: 0.5s;
 }
 
+.hex-total {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 65vh;
+}
+
+.hex-container.back {
+  right: unset;
+  top: unset;
+  padding: 0px 150px;
+}
+
+.hex-container {
+  position: absolute;
+  display: grid;
+  transform: perspective(1000px) rotateY(340deg) rotateX(30deg);
+  padding: 0px 150px;
+}
+
+.hex {
+  float: left;
+  margin-left: 6px;
+  margin-bottom: -52px;
+  transition-duration: 0.5s;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition-duration: top 1s left 1s;
+  top: 0px;
+  left: 0px;
+}
+.hex:hover:not(.back) {
+  top: -5px;
+  left: -5px;
+}
+
+.hex:not(.back) {
+  z-index: 1;
+}
+
+.hex .top {
+  width: 0;
+  border-bottom: 60px solid #24292e;
+  border-left: 104px solid transparent;
+  border-right: 104px solid transparent;
+}
+
+.hex .middle {
+  width: 208px;
+  height: 120px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  background: #24292e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex .bottom {
+  width: 0;
+  border-top: 60px solid #24292e;
+  border-left: 104px solid transparent;
+  border-right: 104px solid transparent;
+}
+
+.hex-row {
+  clear: left;
+}
+
+.hex-row.even {
+  margin-left: -106px;
+}
+
+.back {
+  z-index: -1;
+}
+
+.top.back {
+  border-bottom: 60px solid #0099ff;
+}
+
+.middle.back {
+  background: #0099ff;
+}
+
+.bottom.back {
+  border-top: 60px solid #0099ff;
+}
+
 * {
   margin: 0;
   padding: 0;

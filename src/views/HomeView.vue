@@ -51,7 +51,24 @@
     :slide="item.slide"
     :id="'carousel_' + index"
     />
+    <HexagonComponent
+    />
     <WavesComponent
+    v-for="(item, index) in state.wavesComponent"
+    :key="index"
+    :color="item.color"
+    :directiong="item.direction"
+    :id="'waves_' + index"
+    />
+    <LightboxComponent
+    v-for="(item, index) in state.lightboxComponent"
+    :key="index"
+    :customStyle="item.style"
+    :customClass="item.class"
+    :gallery="item"
+    :images="item.images"
+    :image="item.images.image"
+    :label="item.label"
     />
   </main>
 </template>
@@ -66,6 +83,9 @@ import TitleComponent from '@/components/TitleComponent.vue'
 import SelectComponent from '@/components/SelectComponent.vue'
 import CarouselComponent from '@/components/CarouselComponent.vue'
 import WavesComponent from '@/components/WavesComponent.vue'
+import HexagonComponent from '@/components/HexagonComponent.vue'
+import LightboxComponent from '@/components/LightboxComponent.vue'
+
 const ok = () => {
   alert('test')
 }
@@ -362,6 +382,204 @@ const state = reactive({
           name: 'Iwona',
           description: 'Bardzo polecam schudłam w tydzień 1%!',
           date: '2012-12-12 20:20'
+        }
+      ]
+    }
+  ],
+  wavesComponent: [
+    {
+      class: '',
+      style: '',
+      direction: 'up',
+      color: 'yellow'
+    },
+    {
+      class: '',
+      style: '',
+      direction: 'down',
+      color: '#0099ff'
+    },
+    {
+      class: '',
+      style: '',
+      direction: 'down',
+      color: 'red'
+    }
+  ],
+  lightboxComponent: [
+    {
+      class: '',
+      style: '',
+      images: [
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: ''
+        }
+      ]
+    },
+    {
+      class: '',
+      style: '',
+      images: [
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: ''
+        }
+      ]
+    },
+    {
+      class: '',
+      style: '',
+      images: [
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: '',
+          label: ''
+        },
+        {
+          image: 'https://picsum.photos/seed/picsum/200/200',
+          class: '',
+          style: ''
         }
       ]
     }
