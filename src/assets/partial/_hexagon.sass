@@ -11,7 +11,8 @@
 
 .hex-container
     position: absolute
-    display: grid
+    display: flex
+    flex-direction: column
     transform: perspective(1000px) rotateY(340deg) rotateX(30deg)
     padding: 0px 150px
 
@@ -59,6 +60,7 @@
 
 .hex-row
     clear: left
+    display: flex
 
 .hex-row.even
     margin-left: -106px
@@ -74,3 +76,8 @@
 
 .bottom.back
     border-top: 60px solid  $color-primary
+
+@media screen and (max-width: 850px) 
+    .hex-container
+        scale: 0.5
+        padding: 0 !important

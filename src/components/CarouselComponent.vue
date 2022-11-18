@@ -1,7 +1,7 @@
 <template>
-    <section :id="id" class="opinion d-flex flex-column align-items-center position-relative p-sm-5 mt-5">
+    <section :id="id" class="opinion d-flex flex-column align-items-center position-relative p-sm-5 mt-5 col-12">
         <h2>{{props.label}}</h2>
-      <div class="d-flex gap-1" style="height: 350px; overflow-x: hidden; overflow-y: hidden; max-width: max-content;"  id="opinions">
+      <div class="d-flex gap-1 col-12" style="height: 350px; overflow-x: hidden; overflow-y: hidden;"  id="opinions">
         <div v-for="(item, index) in props.slide" :key="index" class="d-flex flex-column align-items-center col-12 col-sm-4">
             <div :class="current(index, 'int') + ' ' + String(props.customClass)" :id="index" :style="props.customStyle" class="opinion__item glass rounded col-12 p-4 d-flex flex-column align-items-center">
                 <img :src="item.icon" style="scale:0.75;" class="rounded-circle glass col-2">

@@ -1,5 +1,5 @@
 <template>
-  <main class="home d-flex flex-wrap flex-column gap-2">
+  <main class="home d-flex flex-wrap flex-column gap-2 col-12">
     <ButtonComponent
     v-for="(item, index) in state.buttonComponent"
     :key="index"
