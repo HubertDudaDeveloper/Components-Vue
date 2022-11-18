@@ -1,7 +1,7 @@
 [
     {
       "label": "Wyślij",
-      "click": "ok()",
+      "click": "ok",
       "class": "col-3 btn-dark",
       "style": "",
       "disabled": true
@@ -14,7 +14,7 @@
     },
     {
       "label": "Wyślij",
-      "click": "ok()",
+      "click": "ok",
       "class": "col-3 btn-danger",
       "style": ""
     },

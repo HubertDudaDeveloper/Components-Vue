@@ -1,6 +1,6 @@
 <template>
-    <label :for="'select_' + id" :required="required"><strong>{{label}}</strong></label>
-    <select :class="customClass" :style="customStyle" :name="label"  :id="'select_' + id" v-model="select.value" :required="required">
+    <label :for="id" :required="required"><strong>{{label}}</strong></label>
+    <select :class="customClass" :style="customStyle" :name="label"  :id="id" v-model="select.value" :required="required">
         <option v-for="(item, index) in props.option" :key="index" :value="item.value">{{item.value}}</option>
     </select>
 </template>

@@ -3,7 +3,6 @@
     <ButtonComponent
     v-for="(item, index) in buttonComponent"
     :key="index"
-    v-on:click="item.click"
     :customStyle="item.style"
     :customClass="item.class "
     :label="item.label"
@@ -34,7 +33,7 @@
     :disabled="item.disabled"
     />
     <TitleComponent
-    v-for="(item, index) in state.titleComponent"
+    v-for="(item, index) in titleComponent"
     :key="index"
     :customStyle="item.style"
     :customClass="item.class"
@@ -54,14 +53,14 @@
     <HexagonComponent
     />
     <WavesComponent
-    v-for="(item, index) in state.wavesComponent"
+    v-for="(item, index) in wavesComponent"
     :key="index"
     :color="item.color"
     :directiong="item.direction"
     :id="'waves_' + index"
     />
     <LightboxComponent
-    v-for="(item, index) in state.lightboxComponent"
+    v-for="(item, index) in lightboxComponent"
     :key="index"
     :customStyle="item.style"
     :customClass="item.class"
@@ -78,6 +77,9 @@
     :inputs="item.inputs"
     :selects="item.selects"
     :buttons="item.buttons"
+    :id="'form_' + index"
+    />
+    <HeroComponent
     />
   </main>
 </template>
@@ -95,215 +97,22 @@ import WavesComponent from '@/components/WavesComponent.vue'
 import HexagonComponent from '@/components/HexagonComponent.vue'
 import LightboxComponent from '@/components/LightboxComponent.vue'
 import FormComponent from '@/components/FormComponent.vue'
+import HeroComponent from '@/components/HeroComponent.vue'
 
-import * as formComponent from './../structure/dataFormComponent.json'
-import * as inputComponent from './../structure/dataInputComponent.json'
-import * as buttonComponent from './../structure/dataButtonComponent.json'
-import * as selectComponent from './../structure/dataSelectComponent.json'
-import * as carouselComponent from './../structure/dataCarouselComponent.json'
+import inputComponent from './../structure/dataInputComponent.json'
+import buttonComponent from './../structure/dataButtonComponent.json'
+import selectComponent from './../structure/dataSelectComponent.json'
+import carouselComponent from './../structure/dataCarouselComponent.json'
+import titleComponent from './../structure/dataTitleComponent.json'
+import wavesComponent from './../structure/dataWavesComponent.json'
+import lightboxComponent from './../structure/dataLightboxComponent.json'
+import formComponent from './../structure/dataFormComponent.json'
+
+const state = reactive({
+})
 
 const ok = () => {
   alert('test')
 }
 
-const state = reactive({
-  titleComponent: [
-    {
-      class: '',
-      style: '',
-      label: 'Tytuł 1',
-      color: 'red'
-    },
-    {
-      class: '',
-      style: '',
-      label: 'Tytuł 2',
-      color: 'blue'
-    },
-    {
-      class: '',
-      style: '',
-      label: 'Tytuł 3',
-      color: 'green'
-    }
-  ],
-  wavesComponent: [
-    {
-      class: '',
-      style: '',
-      direction: 'up',
-      color: 'yellow'
-    },
-    {
-      class: '',
-      style: '',
-      direction: 'down',
-      color: '#0099ff'
-    },
-    {
-      class: '',
-      style: '',
-      direction: 'down',
-      color: 'red'
-    }
-  ],
-  lightboxComponent: [
-    {
-      class: 'd-flex flex-row flex-wrap  gap-5 justify-content-center',
-      style: '',
-      label: 'Test',
-      images: [
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        }
-      ]
-    },
-    {
-      class: 'd-flex flex-row flex-wrap  gap-5 justify-content-center',
-      style: '',
-      label: 'Test',
-      images: [
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        }
-      ]
-    },
-    {
-      class: 'd-flex flex-row flex-wrap gap-5 justify-content-center',
-      style: '',
-      label: 'Test 3',
-      images: [
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        },
-        {
-          image: 'https://picsum.photos/seed/picsum/200/200',
-          class: 'col-3',
-          style: ''
-        }
-      ]
-    }
-  ]
-})
 </script>

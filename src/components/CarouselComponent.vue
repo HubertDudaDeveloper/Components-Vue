@@ -64,9 +64,6 @@ const props = defineProps({
   id: String
 })
 
-const a = () => {
-  alert(document.getElementsByClassName('opinions_active')[0].id)
-}
 </script>
 <style lang="sass">
 

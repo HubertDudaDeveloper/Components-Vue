@@ -6,7 +6,88 @@
           "click": "ok()",
           "style": "cursor: pointer",
           "class": "col-6",
+          "label": "Imię",
+          "placeholder": "Wprowadź imię...",
+          "required": false,
+          "type": "text",
+          "disabled": false
+        },
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
+          "label": "Email",
+          "placeholder": "Wprowadź Email...",
+          "required": true,
+          "type": "text",
+          "disabled": false
+        }
+      ],
+      "selects": [
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
+          "label": "Płeć",
+          "required": true,
+          "disabled": true,
+          "option": [
+            {
+              "value": "Mężczyzna"
+            },
+            {
+              "value": "Kobieta"
+            },
+            {
+              "value": "Inne"
+            }
+          ]
+        },
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
+          "label": "Auto",
+          "required": true,
+          "disabled": true,
+          "option": [
+            {
+              "value": "Scoda"
+            },
+            {
+              "value": "Mazda"
+            },
+            {
+              "value": "Toyota"
+            }
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Wyślij",
+          "click": "ok()",
+          "class": "col-3 btn-dark",
+          "style": "",
+          "disabled": true
+        },
+        {
+          "label": "Wyślij",
+          "click": "ok()",
+          "class": "col-3 btn-warning",
+          "style": ""
+        }
+      ]
+    },
+    {
+      "label": "Formularz kontaktowy",
+      "inputs": [
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
           "label": "Text",
+          "placeholder": "Wprowadź imię...",
           "required": true,
           "type": "text",
           "disabled": false
@@ -16,6 +97,7 @@
           "style": "cursor: pointer",
           "class": "col-6",
           "label": "Text",
+          "placeholder": "Wprowadź email...",
           "required": true,
           "type": "text",
           "disabled": false
@@ -76,6 +158,5 @@
           "style": ""
         }
       ]
-    },
-    {}
+    }
   ]

@@ -9,8 +9,9 @@
             :customClass="item.class"
             :label="item.label"
             :required="item.required"
+            :placeholder="item.placeholder"
             :type="item.type"
-            :id="'input_' + index"
+            :id="'form__input_' + index"
             :disabled="item.disabled"
         />
         <SelectComponent
@@ -22,7 +23,7 @@
             :label="item.label"
             :option="item.option"
             :required="item.required"
-            :id="'select_' + index"
+            :id="'form__select_' + index"
             :disabled="item.disabled"
         />
         <ButtonComponent
