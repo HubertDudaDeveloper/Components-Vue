@@ -1,0 +1,56 @@
+[
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-6",
+      "label": "Text",
+      "required": true,
+      "disabled": true,
+      "option": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "2"
+        },
+        {
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-1",
+      "label": "Text",
+      "required": true,
+      "option": [
+        {
+          "value": "4"
+        },
+        {
+          "value": "5"
+        },
+        {
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-6",
+      "label": "email",
+      "option": [
+        {
+          "value": "7"
+        },
+        {
+          "value": "8"
+        },
+        {
+          "value": "9"
+        }
+      ]
+    }
+  ]

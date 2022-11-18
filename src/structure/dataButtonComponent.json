@@ -1,0 +1,39 @@
+[
+    {
+      "label": "Wyślij",
+      "click": "ok()",
+      "class": "col-3 btn-dark",
+      "style": "",
+      "disabled": true
+    },
+    {
+      "label": "Wyślij",
+      "click": "ok()",
+      "class": "col-3 btn-warning",
+      "style": ""
+    },
+    {
+      "label": "Wyślij",
+      "click": "ok()",
+      "class": "col-3 btn-danger",
+      "style": ""
+    },
+    {
+      "label": "Wyślij",
+      "click": "ok()",
+      "class": "col-3 btn-success",
+      "style": ""
+    },
+    {
+      "label": "Wyślij",
+      "click": "ok()",
+      "class": "col-3 btn glass",
+      "style": ""
+    },
+    {
+      "label": "Wyślij",
+      "click": "ok()",
+      "class": "col-3 btn-primary",
+      "style": ""
+    }
+]

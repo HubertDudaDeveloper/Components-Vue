@@ -1,0 +1,67 @@
+[
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-6",
+      "label": "Text",
+      "required": true,
+      "type": "text",
+      "disabled": true
+    },
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-1",
+      "label": "Text",
+      "required": true,
+      "type": "checkbox"
+    },
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-6",
+      "label": "email",
+      "required": true,
+      "type": "email"
+    },
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-6",
+      "label": "imie",
+      "required": true,
+      "type": "name"
+    },
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-6",
+      "label": "numer",
+      "required": true,
+      "type": "number"
+    },
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-6",
+      "label": "data",
+      "required": true,
+      "type": "date"
+    },
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-6",
+      "label": "data",
+      "required": true,
+      "type": "range"
+    },
+    {
+      "click": "ok()",
+      "style": "cursor: pointer",
+      "class": "col-6",
+      "label": "color",
+      "required": true,
+      "type": "color"
+    }
+  ]

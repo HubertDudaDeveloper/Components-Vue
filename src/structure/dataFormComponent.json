@@ -1,0 +1,81 @@
+[
+    {
+      "label": "Formularz kontaktowy",
+      "inputs": [
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
+          "label": "Text",
+          "required": true,
+          "type": "text",
+          "disabled": false
+        },
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
+          "label": "Text",
+          "required": true,
+          "type": "text",
+          "disabled": false
+        }
+      ],
+      "selects": [
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
+          "label": "Text",
+          "required": true,
+          "disabled": true,
+          "option": [
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
+          "label": "Text",
+          "required": true,
+          "disabled": true,
+          "option": [
+            {
+              "value": "1"
+            },
+            {
+              "value": "2"
+            },
+            {
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Wyślij",
+          "click": "ok()",
+          "class": "col-3 btn-dark",
+          "style": "",
+          "disabled": true
+        },
+        {
+          "label": "Wyślij",
+          "click": "ok()",
+          "class": "col-3 btn-warning",
+          "style": ""
+        }
+      ]
+    },
+    {}
+  ]

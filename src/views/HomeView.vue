@@ -1,7 +1,7 @@
 <template>
   <main class="home d-flex flex-wrap flex-column gap-2 col-12">
     <ButtonComponent
-    v-for="(item, index) in state.buttonComponent"
+    v-for="(item, index) in buttonComponent"
     :key="index"
     v-on:click="item.click"
     :customStyle="item.style"
@@ -10,7 +10,7 @@
     :disabled="item.disabled"
     />
     <InputComponent
-    v-for="(item, index) in state.inputComponent"
+    v-for="(item, index) in inputComponent"
     :key="index"
     :function="item.click"
     :customStyle="item.style"
@@ -22,7 +22,7 @@
     :disabled="item.disabled"
     />
     <SelectComponent
-    v-for="(item, index) in state.selectComponent"
+    v-for="(item, index) in selectComponent"
     :key="index"
     :function="item.click"
     :customStyle="item.style"
@@ -43,7 +43,7 @@
     :id="'title_' + index"
     />
     <CarouselComponent
-    v-for="(item, index) in state.carouselComponent"
+    v-for="(item, index) in carouselComponent"
     :key="index"
     :customStyle="item.style"
     :customClass="item.class"
@@ -71,6 +71,14 @@
     :label="item.label"
     :id="'lightbox_' + index"
     />
+    <FormComponent
+    v-for="(item, index) in formComponent"
+    :key="index"
+    :label="item.label"
+    :inputs="item.inputs"
+    :selects="item.selects"
+    :buttons="item.buttons"
+    />
   </main>
 </template>
 
@@ -86,174 +94,19 @@ import CarouselComponent from '@/components/CarouselComponent.vue'
 import WavesComponent from '@/components/WavesComponent.vue'
 import HexagonComponent from '@/components/HexagonComponent.vue'
 import LightboxComponent from '@/components/LightboxComponent.vue'
+import FormComponent from '@/components/FormComponent.vue'
+
+import * as formComponent from './../structure/dataFormComponent.json'
+import * as inputComponent from './../structure/dataInputComponent.json'
+import * as buttonComponent from './../structure/dataButtonComponent.json'
+import * as selectComponent from './../structure/dataSelectComponent.json'
+import * as carouselComponent from './../structure/dataCarouselComponent.json'
 
 const ok = () => {
   alert('test')
 }
 
 const state = reactive({
-  buttonComponent: [
-    {
-      label: 'Wyślij',
-      click: 'ok()',
-      class: 'col-3 btn-dark',
-      style: '',
-      disabled: true
-    },
-    {
-      label: 'Wyślij',
-      click: 'ok()',
-      class: 'col-3 btn-warning',
-      style: ''
-    },
-    {
-      label: 'Wyślij',
-      click: 'ok()',
-      class: 'col-3 btn-danger',
-      style: ''
-    },
-    {
-      label: 'Wyślij',
-      click: 'ok()',
-      class: 'col-3 btn-success',
-      style: ''
-    },
-    {
-      label: 'Wyślij',
-      click: 'ok()',
-      class: 'col-3 btn glass',
-      style: ''
-    },
-    {
-      label: 'Wyślij',
-      click: 'ok()',
-      class: 'col-3 btn-primary',
-      style: ''
-    }
-  ],
-  inputComponent: [
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-6',
-      label: 'Text',
-      required: true,
-      type: 'text',
-      disabled: true
-    },
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-1',
-      label: 'Text',
-      required: true,
-      type: 'checkbox'
-    },
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-6',
-      label: 'email',
-      required: true,
-      type: 'email'
-    },
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-6',
-      label: 'imie',
-      required: true,
-      type: 'name'
-    },
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-6',
-      label: 'numer',
-      required: true,
-      type: 'number'
-    },
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-6',
-      label: 'data',
-      required: true,
-      type: 'date'
-    },
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-6',
-      label: 'data',
-      required: true,
-      type: 'range'
-    },
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-6',
-      label: 'color',
-      required: true,
-      type: 'color'
-    }
-  ],
-  selectComponent: [
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-6',
-      label: 'Text',
-      required: true,
-      disabled: true,
-      option: [
-        {
-          value: '1'
-        },
-        {
-          value: '2'
-        },
-        {
-          value: '3'
-        }
-      ]
-    },
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-1',
-      label: 'Text',
-      required: true,
-      option: [
-        {
-          value: '4'
-        },
-        {
-          value: '5'
-        },
-        {
-          value: '6'
-        }
-      ]
-    },
-    {
-      click: 'ok()',
-      style: 'cursor: pointer',
-      class: 'col-6',
-      label: 'email',
-      option: [
-        {
-          value: '7'
-        },
-        {
-          value: '8'
-        },
-        {
-          value: '9'
-        }
-      ]
-    }
-  ],
   titleComponent: [
     {
       class: '',
@@ -272,119 +125,6 @@ const state = reactive({
       style: '',
       label: 'Tytuł 3',
       color: 'green'
-    }
-  ],
-  carouselComponent: [
-    {
-      class: 'bg-dark text-warning',
-      style: '',
-      label: 'Tytuł 1',
-      slide: [
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        }
-      ]
-    },
-    {
-      class: 'bg-primary text-white',
-      style: '',
-      label: 'Tytuł 1',
-      slide: [
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        }
-      ]
-    },
-    {
-      class: '',
-      style: '',
-      label: 'Tytuł 1',
-      slide: [
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        },
-        {
-          icon: 'https://picsum.photos/500',
-          name: 'Iwona',
-          description: 'Bardzo polecam schudłam w tydzień 1%!',
-          date: '2012-12-12 20:20'
-        }
-      ]
     }
   ],
   wavesComponent: [
