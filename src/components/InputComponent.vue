@@ -1,4 +1,5 @@
-<template><label :for="id" :required="required"><strong>{{ label }}</strong></label>
+<template>
+    <label :for="id" :required="required"><strong>{{ label }}</strong></label>
     <input :class="customClass" :style="customStyle" :placeholder="placeholder"  :id="id" :type="type" v-model="input.value" :required="required"/>
 </template>
 <script setup lang="ts">

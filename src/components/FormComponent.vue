@@ -26,6 +26,19 @@
             :id="'form__select_' + index"
             :disabled="item.disabled"
         />
+        <InputComponent
+            v-for="(item, index) in consent"
+            :key="index"
+            :function="item.click"
+            :customStyle="item.style"
+            :customClass="item.class"
+            :label="item.label"
+            :required="item.required"
+            :placeholder="item.placeholder"
+            :type="item.type"
+            :id="'form__checkbox_' + index"
+            :disabled="item.disabled"
+        />
         <ButtonComponent
             v-for="(item, index) in buttons"
             :key="index"
@@ -42,6 +55,7 @@
 import InputComponent from './InputComponent.vue'
 import SelectComponent from './SelectComponent.vue'
 import ButtonComponent from './ButtonComponent.vue'
+
 import { defineProps } from 'vue'
 
 const props = defineProps({
@@ -50,7 +64,8 @@ const props = defineProps({
   customStyle: String,
   inputs: Array,
   selects: Array,
-  buttons: Array
+  buttons: Array,
+  consent: Array
 })
 
 </script>

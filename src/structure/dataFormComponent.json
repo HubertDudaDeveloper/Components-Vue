@@ -157,6 +157,28 @@
           "class": "col-3 btn-warning",
           "style": ""
         }
+      ],
+      "consent": [
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
+          "label": "Rodo",
+          "placeholder": "",
+          "required": false,
+          "type": "checkbox",
+          "disabled": false
+        },
+        {
+          "click": "ok()",
+          "style": "cursor: pointer",
+          "class": "col-6",
+          "label": "Warunki umowy",
+          "placeholder": "",
+          "required": true,
+          "type": "checkbox",
+          "disabled": false
+        }
       ]
     }
   ]

@@ -1,5 +1,5 @@
 <template>
-    <button :style="customStyle" :class="customClass" class="btn" v-if="true">{{label}}</button>
+    <button :style="customStyle" :class="customClass" class="btn" v-if="true"><span>{{label}}</span></button>
 </template>
 <script setup lang="ts">
 import { defineProps } from 'vue'

@@ -77,6 +77,7 @@
     :inputs="item.inputs"
     :selects="item.selects"
     :buttons="item.buttons"
+    :consent="item.consent"
     :id="'form_' + index"
     />
     <HeroComponent
