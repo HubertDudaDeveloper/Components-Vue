@@ -1,16 +1,19 @@
 <template>
     <section class="hero d-grid mb-5 mt-5 vh-100 col-12">
-        <img src="https://picsum.photos/1920/1080" class="col-12"/>
+        <img :src="img" class="col-12"/>
         <div class="shadow col-12"></div>
         <section class="hero__container col-12 d-flex flex-column flex-sm-row justify-content-evenly justify-content-sm-between align-items-center row" >
             <section class="col-8 d-flex flex-column align-items-center text-white">
                 <h2>
-                Zapoznaj się z ofertą!
+                    {{ title }}
                 </h2>
+                <p>
+                    {{ p }}
+                </p>
                 <ButtonComponent
-                    :label="'Cennik'"
-                    :customClass="'p-2 m-5 glass p-5 text-white'"
-                    :customStyle="'font-size:2.5rem;line-height:0px;'"
+                    :label="button.label"
+                    :customClass="button.class"
+                    :customStyle="button.style"
                 />
             </section>
             <section class="col-4 d-flex gap-sm-1 gap-5 flex-row-reverse flex-sm-column justify-content-center align-items-center text-white">
@@ -29,9 +32,17 @@
     </section>
 </template>
 <script setup lang="ts">
-import { defineComponent } from 'vue'
+import { defineProps } from 'vue'
 import ButtonComponent from './ButtonComponent.vue'
 import { BIconArrowUp } from 'bootstrap-vue'
+
+const props = defineProps({
+  index: String,
+  img: String,
+  button: Object,
+  title: String,
+  p: String
+})
 
 </script>
 <style lang="sass">

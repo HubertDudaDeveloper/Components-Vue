@@ -80,8 +80,19 @@
     :consent="item.consent"
     :id="'form_' + index"
     />
-    <HeroComponent
-    />
+    <div class="position-relative">
+      <HeroComponent
+        v-for="(item, index) in heroComponent"
+        :key="index"
+        v-show="index !== 0"
+        class="position-absolute"
+        :title="item.title"
+        :p="item.p"
+        :button="item.button"
+        :img="item.img"
+        :id="'hero_' + index"
+      />
+    </div>
   </main>
 </template>
 
@@ -108,6 +119,7 @@ import titleComponent from './../structure/dataTitleComponent.json'
 import wavesComponent from './../structure/dataWavesComponent.json'
 import lightboxComponent from './../structure/dataLightboxComponent.json'
 import formComponent from './../structure/dataFormComponent.json'
+import heroComponent from './../structure/dataHeroComponent.json'
 
 const state = reactive({
 })

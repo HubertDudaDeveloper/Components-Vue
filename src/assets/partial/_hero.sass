@@ -1,0 +1,30 @@
+
+.hero
+    grid-template-areas: "a"
+    section,
+    img,
+    div
+        grid-area: a
+        font-size: 2em
+        text-shadow: 10px 10px 10px black
+    .shadow
+        background: black
+        opacity: 0.5
+        z-index: 2
+    img
+        z-index: 1
+        object-fit: cover
+        height: 100vh
+    section
+        z-index: 3
+        font-weight: italic
+        font-family: $text-marri
+.diamond
+    position: relative
+    span
+        rotate: -45deg
+        position: absolute
+        padding: 0
+        margin: 0
+        top: 50%
+        left: 25%

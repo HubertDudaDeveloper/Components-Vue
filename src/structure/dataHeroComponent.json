@@ -1,0 +1,24 @@
+[
+    {
+        "img": "https://picsum.photos/1920/1080",
+        "button": {
+            "label": "Cennik",
+            "link": "#",
+            "class": "p-2 m-5 glass p-5 text-white",
+            "style": "font-size:2.5rem;line-height:0px;"
+        },
+        "title": "Kup teraz",
+        "p": "fajne"
+    },
+    {
+        "img": "https://picsum.photos/1920/1080",
+        "button": {
+            "label": "Kontakt",
+            "link": "#",
+            "class": "p-2 m-5 glass p-5 text-white",
+            "style": "font-size:2.5rem;line-height:0px;"
+        },
+        "title": "Nowy slide",
+        "p": "też fajne"
+    }
+]
