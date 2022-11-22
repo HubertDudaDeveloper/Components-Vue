@@ -5,7 +5,8 @@
             "label": "Cennik",
             "link": "#",
             "class": "p-2 m-5 glass p-5 text-white",
-            "style": "font-size:2.5rem;line-height:0px;"
+            "style": "font-size:2.5rem;line-height:0px;",
+            "active": true
         },
         "title": "Kup teraz",
         "p": "fajne"

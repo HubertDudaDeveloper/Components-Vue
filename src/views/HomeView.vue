@@ -2,7 +2,7 @@
   <main class="home d-flex flex-wrap flex-column gap-2 col-12">
     <ButtonComponent
     v-for="(item, index) in buttonComponent"
-    :key="index"
+    :key="'buton_' + index"
     :customStyle="item.style"
     :customClass="item.class "
     :label="item.label"
@@ -10,87 +10,86 @@
     />
     <InputComponent
     v-for="(item, index) in inputComponent"
-    :key="index"
+    :key="'input_' + index"
     :function="item.click"
     :customStyle="item.style"
     :customClass="item.class"
     :label="item.label"
     :required="item.required"
     :type="item.type"
-    :id="'input_' + index"
+    :id="index"
     :disabled="item.disabled"
     />
     <SelectComponent
     v-for="(item, index) in selectComponent"
-    :key="index"
+    :key="'select_' + index"
     :function="item.click"
     :customStyle="item.style"
     :customClass="item.class"
     :label="item.label"
     :option="item.option"
     :required="item.required"
-    :id="'select_' + index"
+    :id="index"
     :disabled="item.disabled"
     />
     <TitleComponent
     v-for="(item, index) in titleComponent"
-    :key="index"
+    :key="'title_' + index"
     :customStyle="item.style"
     :customClass="item.class"
     :label="item.label"
     :color="item.color"
-    :id="'title_' + index"
+    :id="index"
     />
     <CarouselComponent
     v-for="(item, index) in carouselComponent"
-    :key="index"
+    :key="'carousel_' + index"
     :customStyle="item.style"
     :customClass="item.class"
     :label="item.label"
     :slide="item.slide"
-    :id="'carousel_' + index"
+    :id="index"
     />
     <HexagonComponent
     />
     <WavesComponent
     v-for="(item, index) in wavesComponent"
-    :key="index"
+    :key="'waves_' + index"
     :color="item.color"
     :directiong="item.direction"
-    :id="'waves_' + index"
+    :id="index"
     />
     <LightboxComponent
     v-for="(item, index) in lightboxComponent"
-    :key="index"
+    :key="'lightbox_' + index"
     :customStyle="item.style"
     :customClass="item.class"
     :gallery="item"
     :images="item.images"
     :image="item.images.image"
     :label="item.label"
-    :id="'lightbox_' + index"
+    :id="index"
     />
     <FormComponent
     v-for="(item, index) in formComponent"
-    :key="index"
+    :key="'form_' + index"
     :label="item.label"
     :inputs="item.inputs"
     :selects="item.selects"
     :buttons="item.buttons"
     :consent="item.consent"
-    :id="'form_' + index"
+    :id="index"
     />
     <div class="position-relative">
       <HeroComponent
         v-for="(item, index) in heroComponent"
-        :key="index"
-        v-show="index !== 0"
+        :key="'hero_' + index"
         class="position-absolute"
         :title="item.title"
         :p="item.p"
         :button="item.button"
         :img="item.img"
-        :id="'hero_' + index"
+        :id="index"
       />
     </div>
   </main>

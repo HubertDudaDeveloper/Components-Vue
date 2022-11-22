@@ -1,5 +1,6 @@
 <template>
-    <section class="hero d-grid mb-5 mt-5 vh-100 col-12">
+    <section class="mb-5 mt-5 vh-100 col-12" v-show="props.id === counter">
+        <div class="hero d-grid">
         <img :src="img" class="col-12"/>
         <div class="shadow col-12"></div>
         <section class="hero__container col-12 d-flex flex-column flex-sm-row justify-content-evenly justify-content-sm-between align-items-center row" >
@@ -15,34 +16,53 @@
                     :customClass="button.class"
                     :customStyle="button.style"
                 />
-            </section>
-            <section class="col-4 d-flex gap-sm-1 gap-5 flex-row-reverse flex-sm-column justify-content-center align-items-center text-white">
+                </section>
+                <section class="col-4 d-flex gap-sm-1 gap-5 flex-row-reverse flex-sm-column justify-content-center align-items-center text-white">
                 <ButtonComponent
                     :label="'→'"
                     :customClass="'diamond p-5 m-2 m-sm-5 glass text-white'"
                     :customStyle="'font-size:2.5rem;line-height:0px;rotate:45deg;'"
+                    @click="counterk('inc')"
                 />
                 <ButtonComponent
                     :label="'←'"
                     :customClass="'diamond p-5 m-2 m-sm-5 glass text-white'"
                     :customStyle="'font-size:2.5rem;line-height:0px;rotate:45deg;'"
+                    @click="counterk('dec')"
                 />
+                </section>
             </section>
-        </section>
+        </div>
     </section>
 </template>
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, ref } from 'vue'
 import ButtonComponent from './ButtonComponent.vue'
 import { BIconArrowUp } from 'bootstrap-vue'
+import { computed } from '@vue/reactivity'
 
 const props = defineProps({
   index: String,
   img: String,
   button: Object,
   title: String,
-  p: String
+  p: String,
+  id: Number
 })
+// eslint-disable-next-line
+let counter = ref(Number(0))
+const counterk = (k) => {
+  switch (k) {
+    case 'inc':
+      counter.value++
+      console.log(counter.value)
+      return
+    case 'dec':
+      counter.value--
+      console.log(counter.value)
+  }
+}
+const key = computed(() => props.id === counter.value)
 
 </script>
 <style lang="sass">
@@ -50,6 +70,7 @@ const props = defineProps({
 
 .hero
     grid-template-areas: "a"
+    transition: 0.5s
     section,
     img,
     div
