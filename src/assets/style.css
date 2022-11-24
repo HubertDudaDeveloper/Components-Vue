@@ -146,6 +146,72 @@ a:hover,
     gap: 15px !important;
   }
 }
+.hero {
+  grid-template-areas: "a";
+}
+.hero section,
+.hero img,
+.hero div {
+  grid-area: a;
+  font-size: 2em;
+  text-shadow: 10px 10px 10px black;
+}
+.hero .shadow {
+  background: black;
+  opacity: 0.5;
+  z-index: 2;
+}
+.hero img {
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100vh;
+}
+.hero section {
+  z-index: 3;
+  font-weight: italic;
+  font-family: "Merriweather", serif;
+}
+.hero-wrapper {
+  transition: 1s;
+  overflow: hidden;
+}
+
+.diamond__up,
+.diamond__down {
+  position: relative;
+  font-size: 2.5rem;
+  line-height: 0px;
+  rotate: 45deg;
+}
+.diamond__up span,
+.diamond__down span {
+  rotate: -45deg;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  left: 25%;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease, transform 1s ease !important;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0 !important;
+}
+
+.fade-enter-from {
+  transform: translateX(-10vw) scale(1.1);
+}
+
+.fade-leave-to {
+  transform: translateX(10vw) scale(1.1);
+}
+
 * {
   margin: 0;
   padding: 0;

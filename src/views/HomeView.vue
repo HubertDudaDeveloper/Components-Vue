@@ -81,16 +81,9 @@
     :id="index"
     />
     <div class="position-relative">
-      <HeroComponent
-        v-for="(item, index) in heroComponent"
-        :key="'hero_' + index"
-        class="position-absolute"
-        :title="item.title"
-        :p="item.p"
-        :button="item.button"
-        :img="item.img"
-        :id="index"
-      />
+        <HeroComponent
+          :heroComponent="heroComponent"
+        />
     </div>
   </main>
 </template>

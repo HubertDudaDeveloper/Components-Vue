@@ -19,8 +19,15 @@
         z-index: 3
         font-weight: italic
         font-family: $text-marri
-.diamond
+    &-wrapper
+        transition: 1s
+        overflow: hidden
+.diamond__up,
+.diamond__down
     position: relative
+    font-size:2.5rem
+    line-height:0px
+    rotate:45deg
     span
         rotate: -45deg
         position: absolute
@@ -28,3 +35,15 @@
         margin: 0
         top: 50%
         left: 25%
+.fade-enter-active,
+.fade-leave-active 
+    transition: opacity 0.5s ease, transform 1s ease !important
+
+.fade-enter-from,
+.fade-leave-to 
+    opacity: 0 !important
+
+.fade-enter-from
+    transform: translateX(-10vw) scale(1.1)
+.fade-leave-to
+    transform: translateX(10vw) scale(1.1)

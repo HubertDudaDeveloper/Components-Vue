@@ -1,6 +1,6 @@
 [
     {
-        "img": "https://picsum.photos/1920/1080",
+        "img": "https://picsum.photos/id/1/1920/1080",
         "button": {
             "label": "Cennik",
             "link": "#",
@@ -12,6 +12,54 @@
         "p": "fajne"
     },
     {
+        "img": "https://picsum.photos/id/2/1920/1080",
+        "button": {
+            "label": "Cennik",
+            "link": "#",
+            "class": "p-2 m-5 glass p-5 text-white",
+            "style": "font-size:2.5rem;line-height:0px;",
+            "active": true
+        },
+        "title": "Kup teasdasdraz",
+        "p": "fajne"
+    },
+    {
+        "img": "https://picsum.photos/id/3/1920/1080",
+        "button": {
+            "label": "Cennik",
+            "link": "#",
+            "class": "p-2 m-5 glass p-5 text-white",
+            "style": "font-size:2.5rem;line-height:0px;",
+            "active": true
+        },
+        "title": "Kup te123123raz",
+        "p": "fajne"
+    },
+    {
+        "img": "https://picsum.photos/id/4/1920/1080",
+        "button": {
+            "label": "Cennik",
+            "link": "#",
+            "class": "p-2 m-5 glass p-5 text-white",
+            "style": "font-size:2.5rem;line-height:0px;",
+            "active": true
+        },
+        "title": "Kup ter56767az",
+        "p": "fajasdne"
+    },
+    {
+        "img": "https://picsum.photos/id/5/1920/1080",
+        "button": {
+            "label": "Cennik",
+            "link": "#",
+            "class": "p-2 m-5 glass p-5 text-white",
+            "style": "font-size:2.5rem;line-height:0px;",
+            "active": true
+        },
+        "title": "Kup terzxczxcaz",
+        "p": "fagsdjne"
+    },
+    {
         "img": "https://picsum.photos/1920/1080",
         "button": {
             "label": "Kontakt",
@@ -19,7 +67,7 @@
             "class": "p-2 m-5 glass p-5 text-white",
             "style": "font-size:2.5rem;line-height:0px;"
         },
-        "title": "Nowy slide",
-        "p": "też fajne"
+        "title": "Nowy slidasfase",
+        "p": "też fajnasdde"
     }
 ]
