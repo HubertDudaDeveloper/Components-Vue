@@ -80,11 +80,9 @@
     :consent="item.consent"
     :id="index"
     />
-    <div class="position-relative">
-        <HeroComponent
-          :heroComponent="heroComponent"
-        />
-    </div>
+    <HeroComponent
+      :heroComponent="heroComponent"
+    />
   </main>
 </template>
 

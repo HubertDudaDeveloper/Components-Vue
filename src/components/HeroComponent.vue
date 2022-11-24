@@ -1,4 +1,5 @@
 <template>
+    <div class="position-relative">
     <section
           v-for="(item, index) in heroComponent"
           :key="'hero_' + index"
@@ -38,8 +39,9 @@
                 </section>
             </section>
         </div>
-    </Transition>
-    </section>
+        </Transition>
+        </section>
+    </div>
 </template>
 <script setup lang="ts">
 import { defineProps, ref, reactive } from 'vue'
