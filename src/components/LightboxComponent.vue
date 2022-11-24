@@ -1,5 +1,6 @@
 <template>
-    <h2>{{label}}</h2>
+  <div class="d-flex flex-column align-items-center mb-5">
+    <h2 class="p-5">{{label}}</h2>
     <section
     :id="id"
     :class="customClass"
@@ -16,6 +17,7 @@
         v-on:click="lightbox(item.image, 'image_' + index)"
         >
     </section>
+  </div>
 </template>
 <script setup lang="ts">
 import { ref, reactive, defineProps } from 'vue'

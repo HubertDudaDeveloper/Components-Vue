@@ -39,16 +39,15 @@
     :customClass="item.class"
     :label="item.label"
     :color="item.color"
-    :id="index"
+    :id="'title_' + index"
     />
     <CarouselComponent
     v-for="(item, index) in carouselComponent"
     :key="'carousel_' + index"
-    :customStyle="item.style"
     :customClass="item.class"
     :label="item.label"
     :slide="item.slide"
-    :id="index"
+    :id="'carousel_' + index"
     />
     <HexagonComponent
     />
