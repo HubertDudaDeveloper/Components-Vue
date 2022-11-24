@@ -1,9 +1,9 @@
 <template>
-    <div class="position-relative">
+    <div class="position-relative vh-100 col-12">
     <section
           v-for="(item, index) in heroComponent"
           :key="'hero_' + index"
-          class="hero-wrapper mb-5 mt-5 vh-100 col-12 position-absolute"
+          class="hero-wrapper mb-5 position-absolute"
           :id="'hero_' + index"
           >
           <Transition name="fade">
